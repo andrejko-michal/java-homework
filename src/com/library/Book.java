@@ -11,5 +11,8 @@ public class Book {
     private String authorName;
     private int numberOfPages;
 
-
+    @Override
+    public String toString() {
+        return this.bookName;
+    }
 }
