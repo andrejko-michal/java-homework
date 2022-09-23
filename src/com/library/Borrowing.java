@@ -29,9 +29,6 @@ public class Borrowing {
     private LocalDate returnDate;
 
     public long numberOfDays() {
-        if (returnDate == null){
-            returnDate = LocalDate.now();
-        }
-        return DAYS.between(borrowingDate, returnDate);
+        return returnDate == null ? DAYS.between(borrowingDate, LocalDate.now()) : DAYS.between(borrowingDate, returnDate);
     }
 }
